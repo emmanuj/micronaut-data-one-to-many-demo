@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: oneToManyDemo
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 'password'
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+flyway:
+  datasources:
+    default:
+      locations: classpath:db-migrations
+      clean-schema: false
+      enabled: true
